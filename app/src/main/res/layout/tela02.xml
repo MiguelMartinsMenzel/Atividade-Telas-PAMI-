@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#00838F"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Label E-mail -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seu e-mail"
+        android:textSize="14sp" />
+
+    <!-- Campo E-mail -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="seuemail@hotmail.com"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Label Senha -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua senha"
+        android:textSize="14sp" />
+
+    <!-- Campo Senha -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="1234"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp" />
+
+    <!-- CheckBox -->
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manter-me logado"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botão Logar -->
+    <Button
+        android:id="@+id/btnLogar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logar"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="0dp"
+        app:backgroundTint="#39a0ac"
+        android:layout_marginTop="16dp" />
+
+    <!-- Parte de baixo: "Ainda não tem conta?" + botão cadastre-se -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ainda não tem conta?" />
+
+        <TextView
+            android:id="@+id/tvCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Cadastre-se"
+            android:textStyle="bold"
+            android:textColor="#39a0ac" />
+    </LinearLayout>
+
+</LinearLayout>
